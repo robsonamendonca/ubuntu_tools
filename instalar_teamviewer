@@ -1,0 +1,15 @@
+sudo sh -c "echo 'deb http://linux.teamviewer.com/deb stable main' >> /etc/apt/sources.list.d/teamviewer.list"
+
+sudo sh -c "echo 'deb http://linux.teamviewer.com/deb preview main' >> /etc/apt/sources.list.d/teamviewer.list"
+
+###Passo 3. Baixe a chave do repositório do programa com o comando:
+
+wget -q https://download.teamviewer.com/download/linux/signature/TeamViewer2017.asc -O- | sudo apt-key add -
+
+###Passo 4. Atualize o gerenciador de pacotes com o comando:
+
+sudo apt-get update
+
+##Passo 5. Agora use o comando abaixo para instalar o programa;
+
+sudo apt-get install teamviewer
